@@ -20,7 +20,10 @@ For Vega: [`vg.tooltip(vgView[, options])`](docs/APIs.md#vgtooltip)
 1. [Creating Your Tooltip](docs/creating_your_tooltip.md)
 2. [Customizing Your Tooltip](docs/customizing_your_tooltip.md)
 
-## Run Instructions
+## [How to Run](#run)
 1. In the project folder `vega-tooltip`, type command `npm install` to install dependencies.
 2. Then, type `npm start`. This will build the library and start a web server.
 3. In your browser, navigate to `http://localhost:4000/`, where you can see various Vega-Lite and Vega visualizations with tooltip interaction.
+
+## Contributing to Vega Tooltip
+Please see our [contributing guidelines](docs/Contributing.md) and [list of issues](https://github.com/vega/vega-tooltip/issues). 
