@@ -8,8 +8,10 @@
 
   /**
   * Export API for Vega visualizations: vg.tooltip(vgView, options)
-  * options can specify whether to show all fields or to show only custom fields
+  * @param vgView Vega View
+  * @param options can specify whether to show all fields or to show only custom fields
   * It can also provide custom title and format for fields
+  * @return tooltip object. Note that the object contains a destroy() function, which will let users free up memory after they are done with * tooltip (e.g., after they destroy a visualization).
   */
   window.vg = window.vg || {};
   window.vg.tooltip = function(vgView, options) {
@@ -30,7 +32,8 @@
     });
 
     // update tooltip position on mouse move
-    // (important for large marks e.g. bars)
+    // important for large marks such as bars, as this allows the
+    // tooltip to tag along with the cursor as it moves inside the mark
     vgView.on("mousemove.tooltipUpdate", function(event, item) {
       if (shouldShowTooltip(item) && tooltipActive) {
         update(event, item, options);
@@ -62,9 +65,11 @@
 
   /**
   * Export API for Vega-Lite visualizations: vl.tooltip(vgView, vlSpec, options)
-  * options can specify whether to show all fields or to show only custom fields
+  * @param vgView Vega View
+  * @param options can specify whether to show all fields or to show only custom fields
   * It can also provide custom title and format for fields
   * options can be supplemented by vlSpec
+  * @return tooltip object. Note that the object contains a destroy() function, which will let users free up memory after they are done with * tooltip (e.g., after they destroy a visualization).
   */
   window.vl = window.vl || {};
   window.vl.tooltip = function(vgView, vlSpec, options) {
@@ -88,7 +93,8 @@
     });
 
     // update tooltip position on mouse move
-    // (important for large marks e.g. bars)
+    // important for large marks such as bars, as this allows the
+    // tooltip to tag along with the cursor as it moves inside the mark
     vgView.on("mousemove.tooltipUpdate", function(event, item) {
       if (shouldShowTooltip(item) && tooltipActive) {
         update(event, item, options);
