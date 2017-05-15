@@ -3262,7 +3262,7 @@ vega-wordcloud@>=1.0.0-beta:
   optionalDependencies:
     canvas "^1.6.0"
 
-vega@^3.0.0-beta.28, vega@^3.0.0-beta.30:
+vega@^3.0.0-beta.30:
   version "3.0.0-beta.31"
   resolved "https://registry.yarnpkg.com/vega/-/vega-3.0.0-beta.31.tgz#e92e4fe9d8caf9bf6d4647ecc9f7ae9b0c31395a"
   dependencies:
